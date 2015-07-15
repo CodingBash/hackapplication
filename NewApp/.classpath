@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="libs/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="libs/poi-lib.jar"/>
 	<classpathentry kind="lib" path="libs/poi-scratchpad-3.10-beta1.jar"/>
+	<classpathentry kind="lib" path="libs/poi-3.0.2.FINAL.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

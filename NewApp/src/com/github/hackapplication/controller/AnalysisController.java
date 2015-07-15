@@ -1,11 +1,11 @@
 package com.github.hackapplication.controller;
 
 import com.github.hackapplication.model.ParsedEmail;
+
 import com.github.hackapplication.model.SPI;
 
 import de.tudarmstadt.ukp.jwktl.api.IWiktionaryEdition;
-
-public class Analyzer {
+public class AnalysisController extends AbstractController {
 
 	private ParsedEmail email;
 	private SPI spi;
