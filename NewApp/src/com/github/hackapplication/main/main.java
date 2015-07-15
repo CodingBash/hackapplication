@@ -16,7 +16,8 @@ public class main {
 					FrameManager.setInitialFrame("main");
 				} catch (Exception e) {
 					e.printStackTrace();
-				}
+				}                           
+				
 			}
 		});
 	}
