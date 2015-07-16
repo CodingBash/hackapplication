@@ -1,26 +1,13 @@
 package com.github.hackapplication.controller;
 
+import com.github.hackapplication.exception.FieldsNotInstantiatedException;
 import com.github.hackapplication.model.ParsedEmail;
-
 import com.github.hackapplication.model.SPI;
-
-import de.tudarmstadt.ukp.jwktl.api.IWiktionaryEdition;
 public class AnalysisController extends AbstractController {
 
 	private ParsedEmail email;
 	private SPI spi;
-	IWiktionaryEdition wkt;
-
-	public void initJwktlConnection() {
-		// if(wkt == null){
-		// wkt = JWKTL.openEdition();
-		// }
-	}
-
-	public void closeJwktlConnection() {
-		if (wkt != null)
-			wkt.close();
-	}
+	
 
 	public void setEmail(ParsedEmail email) {
 		this.email = email;
@@ -29,9 +16,32 @@ public class AnalysisController extends AbstractController {
 	public void setSpi(SPI spi) {
 		this.spi = spi;
 	}
+	
+	public void initializeAnalysis() throws FieldsNotInstantiatedException{
+		if(email == null || spi == null){
+			throw new FieldsNotInstantiatedException();
+		}
+		
+		analyzeFrom();
+		analyzeGrammer();
+		analyzeKeywords();
+	}
+	 
+	private void analyzeKeywords() {
+		// TODO Auto-generated method stub
+		
+	}
 
-	public void setWkt(IWiktionaryEdition wkt) {
-		this.wkt = wkt;
+	private void analyzeGrammer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void analyzeFrom() {
+		String mockup = "testemail@statefarm.com";
+		int domainStart = mockup.lastIndexOf('@') + 1;
+		String domain = mockup.substring(domainStart);
+		
 	}
 
 }

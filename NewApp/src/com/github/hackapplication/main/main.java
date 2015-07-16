@@ -8,6 +8,10 @@ import com.github.hackapplication.swing.MainWindowFrame;
 public class main {
 	@SuppressWarnings("all")
 	public static void main(String[] args){
+		String mockup = "testemail@statefarm.com";
+		int domainStart = mockup.lastIndexOf('@');
+		String domain = mockup.substring(domainStart);
+		System.out.println(domain);
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

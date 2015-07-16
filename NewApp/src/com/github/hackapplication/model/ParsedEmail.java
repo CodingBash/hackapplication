@@ -1,6 +1,5 @@
 package com.github.hackapplication.model;
 
-import src.scratchpad.src.org.apache.poi.hsmf.datatypes.AttachmentChunks;
 
 /**
  * <h1> Parsed Email model </h1>
@@ -14,7 +13,6 @@ import src.scratchpad.src.org.apache.poi.hsmf.datatypes.AttachmentChunks;
  */
 public class ParsedEmail {
 	/*Deleted unused fields after project */
-	private AttachmentChunks[] msgAttachments;
 	private String msgTopic;
 	private String msgBcc;
 	private String msgCc;
@@ -22,11 +20,8 @@ public class ParsedEmail {
 	private String msgTo;
 	private String msgHeader;
 	private String msgHtmlBody;
-	//private Chunks msgMainChunks;
 	private String msgMessageClass;
 	private String msgDate;
-	//private NameIdChunks msgNameIdChunks;
-	//private RecipientChunks[] msgRecipientDetailsChunks;
 	private String msgRecipientEmailAddress;
 	private String[] msgRecipientEmailAddressList;
 	private String msgRecipientName;
